@@ -16,7 +16,9 @@ namespace ver._2
 
     public partial class Form2 : Form
     {
-        
+        static String SqlConn = "Server=localhost;Port=3306; Database=ver2;Uid=root;Pwd=1234";
+        MySqlConnection conn = new MySqlConnection(SqlConn);
+        MySqlCommand cm;
         Form1 form1;
         public Form2(Form1 form1)
         {
@@ -27,8 +29,8 @@ namespace ver._2
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=4306;username=root;password=;");
-            
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,13 +73,13 @@ namespace ver._2
                 form1 = new Form1();
                 form1.Visible = true;
                 this.Close();
-                
+
             }
             else
             {
 
             }
-        
+
 
         }
 
@@ -104,7 +106,14 @@ namespace ver._2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            conn.Open();
+            cm = new MySqlCommand("insert into stock (KIND,quantity,placePurchase,date) value (@KIND,@quantity,@placePurchase,@date)",conn);
+            cm.Parameters.AddWithValue("@KIND", textBox1.Text);
+            cm.Parameters.AddWithValue("@quantity", textBox2.Text);
+            cm.Parameters.AddWithValue("@placePurchase", textBox3.Text);
+            cm.Parameters.AddWithValue("@date", textBox4.Text);
+            cm.ExecuteNonQuery();
+            conn.Close();
             try
             {
                 if (MessageBox.Show("입고를 하시겠습니까 ", "입고", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -116,11 +125,11 @@ namespace ver._2
                     MessageBox.Show("입고가 취소되었습니다");
                 }
             }
-            catch(DivideByZeroException textBox1)
+            catch (DivideByZeroException textBox1)
             {
                 MessageBox.Show("값을 넣어주세요");
             }
-            
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -129,13 +138,17 @@ namespace ver._2
             textBox2.Text = string.Empty;
             textBox3.Text = string.Empty;
             textBox4.Text = string.Empty;
-            
+
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-     
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

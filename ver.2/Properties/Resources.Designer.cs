@@ -63,6 +63,16 @@ namespace ver._2.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_454099801_32LqElT2W1vgRQ6YRsp3h2IsKQxTCnaG {
+            get {
+                object obj = ResourceManager.GetObject("360_F_454099801_32LqElT2W1vgRQ6YRsp3h2IsKQxTCnaG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);

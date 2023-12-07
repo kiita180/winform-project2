@@ -92,3 +92,4 @@ C:\Users\ehdrb\source\repos\winformProject2-master\winformProject2-master\ver.2\
 C:\Users\ehdrb\source\repos\winformProject2-master\winformProject2-master\ver.2\obj\Debug\net6.0-windows\ver.2.csproj.CopyComplete
 C:\Users\ehdrb\source\repos\winformProject2-master\winformProject2-master\ver.2\bin\Debug\net6.0-windows\log4net.dll
 C:\Users\ehdrb\source\repos\winformProject2-master\winformProject2-master\ver.2\bin\Debug\net6.0-windows\config\XMLFile1.xml
+C:\Users\ehdrb\source\repos\winformProject2-master\winformProject2-master\ver.2\obj\Debug\net6.0-windows\ver.2.sourcelink.json

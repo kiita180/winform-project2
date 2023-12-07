@@ -88,7 +88,7 @@
             // 
             // login_butten
             // 
-            login_butten.Image = Properties.Resources.images;
+            login_butten.BackgroundImage = Properties.Resources._360_F_454099801_32LqElT2W1vgRQ6YRsp3h2IsKQxTCnaG;
             login_butten.Location = new Point(120, 320);
             login_butten.Margin = new Padding(2);
             login_butten.Name = "login_butten";

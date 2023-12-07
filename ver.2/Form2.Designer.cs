@@ -57,21 +57,18 @@
             label7 = new Label();
             label8 = new Label();
             tabPage3 = new TabPage();
-            button9 = new Button();
-            button10 = new Button();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             button11 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // nickname_rabel
@@ -204,42 +201,43 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 4;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(50, 238);
             label4.Name = "label4";
-            label4.Size = new Size(39, 15);
+            label4.Size = new Size(31, 15);
             label4.TabIndex = 3;
-            label4.Text = "label4";
+            label4.Text = "날짜";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(50, 171);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
+            label3.Size = new Size(43, 15);
             label3.TabIndex = 2;
-            label3.Text = "label3";
+            label3.Text = "매입처";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(50, 106);
             label2.Name = "label2";
-            label2.Size = new Size(39, 15);
+            label2.Size = new Size(31, 15);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "수량";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(50, 42);
             label1.Name = "label1";
-            label1.Size = new Size(39, 15);
+            label1.Size = new Size(31, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "종류";
             // 
             // tabPage2
             // 
@@ -321,40 +319,31 @@
             label6.AutoSize = true;
             label6.Location = new Point(45, 163);
             label6.Name = "label6";
-            label6.Size = new Size(39, 15);
+            label6.Size = new Size(43, 15);
             label6.TabIndex = 12;
-            label6.Text = "label6";
+            label6.Text = "입고처";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(45, 98);
             label7.Name = "label7";
-            label7.Size = new Size(39, 15);
+            label7.Size = new Size(31, 15);
             label7.TabIndex = 11;
-            label7.Text = "label7";
+            label7.Text = "수량";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Location = new Point(45, 34);
             label8.Name = "label8";
-            label8.Size = new Size(39, 15);
+            label8.Size = new Size(31, 15);
             label8.TabIndex = 10;
-            label8.Text = "label8";
+            label8.Text = "종류";
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(button9);
-            tabPage3.Controls.Add(button10);
-            tabPage3.Controls.Add(textBox9);
-            tabPage3.Controls.Add(textBox10);
-            tabPage3.Controls.Add(textBox11);
-            tabPage3.Controls.Add(textBox12);
-            tabPage3.Controls.Add(label9);
-            tabPage3.Controls.Add(label10);
-            tabPage3.Controls.Add(label11);
-            tabPage3.Controls.Add(label12);
+            tabPage3.Controls.Add(dataGridView1);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(670, 308);
@@ -362,87 +351,40 @@
             tabPage3.Text = "재고";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // dataGridView1
             // 
-            button9.Location = new Point(551, 254);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 19;
-            button9.Text = "button9";
-            button9.UseVisualStyleBackColor = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(667, 305);
+            dataGridView1.TabIndex = 20;
             // 
-            // button10
+            // Column1
             // 
-            button10.Location = new Point(433, 254);
-            button10.Name = "button10";
-            button10.Size = new Size(75, 23);
-            button10.TabIndex = 18;
-            button10.Text = "button10";
-            button10.UseVisualStyleBackColor = true;
+            Column1.HeaderText = "종류";
+            Column1.Name = "Column1";
             // 
-            // textBox9
+            // Column2
             // 
-            textBox9.Location = new Point(125, 227);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 23);
-            textBox9.TabIndex = 17;
+            Column2.HeaderText = "수량";
+            Column2.Name = "Column2";
             // 
-            // textBox10
+            // Column3
             // 
-            textBox10.Location = new Point(125, 163);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 16;
+            Column3.HeaderText = "입고일";
+            Column3.Name = "Column3";
             // 
-            // textBox11
+            // Column4
             // 
-            textBox11.Location = new Point(125, 95);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
-            textBox11.TabIndex = 15;
+            Column4.HeaderText = "출고일";
+            Column4.Name = "Column4";
             // 
-            // textBox12
+            // Column5
             // 
-            textBox12.Location = new Point(125, 31);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(100, 23);
-            textBox12.TabIndex = 14;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(45, 230);
-            label9.Name = "label9";
-            label9.Size = new Size(39, 15);
-            label9.TabIndex = 13;
-            label9.Text = "label9";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(45, 163);
-            label10.Name = "label10";
-            label10.Size = new Size(46, 15);
-            label10.TabIndex = 12;
-            label10.Text = "label10";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(45, 98);
-            label11.Name = "label11";
-            label11.Size = new Size(46, 15);
-            label11.TabIndex = 11;
-            label11.Text = "label11";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(45, 34);
-            label12.Name = "label12";
-            label12.Size = new Size(46, 15);
-            label12.TabIndex = 10;
-            label12.Text = "label12";
+            Column5.HeaderText = "불량";
+            Column5.Name = "Column5";
             // 
             // button11
             // 
@@ -466,9 +408,10 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(nickname_rabel);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Form2";
-            Text = "Form2";
+            Text = "d";
             Load += Form2_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
@@ -476,7 +419,7 @@
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -523,5 +466,11 @@
         private Label label11;
         private Label label12;
         private Button button11;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }
